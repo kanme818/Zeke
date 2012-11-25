@@ -1,0 +1,32 @@
+/* only for development */
+/* only for seeing the structure */
+.header-wrapper {
+	height: 200px;
+	border: 1px solid red;
+}
+
+.body-wrapper {
+	height: 600px;
+	border: 1px solid red;
+}
+
+.content-wrapper {
+	height: 100%;
+	border: 1px solid red;
+}
+
+.sidebar-wrapper {
+	height: 100%;
+	border: 1px solid red;
+}
+
+.footer-wrapper {
+	height: 200px;
+	border: 1px solid red;
+}
+
+.inner-wrapper {
+	height: 100%;
+	border: 1px solid red;
+}
+/* only for seeing the structure */
