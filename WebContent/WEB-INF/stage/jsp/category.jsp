@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%@include file="jspf/header/header.jspf"%>
-	<%@include file="jspf/content/category/category_typeB.jspf"%>
+	<%@include file="jspf/content-category/content-category.jspf"%>
 	<%@include file="jspf/sidebar/sidebar_typeA.jspf"%>
 	<%@include file="jspf/footer/footer.jspf"%>
 </body>
