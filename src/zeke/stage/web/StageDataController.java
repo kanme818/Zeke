@@ -13,24 +13,55 @@ import zeke.stage.constant.StageConstant;
 import zeke.stage.entity.Article;
 import zeke.stage.vo.requestparameter.ArticleSearchCondition;
 
+// TODO: Auto-generated Javadoc
+/**
+ * 前台AJAX类型请求.
+ */
 @Controller
 @RequestMapping(value = "/data")
 public class StageDataController extends BaseController {
 
+	/**
+	 * 更多该类文章.
+	 * 
+	 * @param condition
+	 *            the condition
+	 * @return the object
+	 */
 	@RequestMapping(value = "more")
 	@ResponseBody
 	public Object moreArticles(ArticleSearchCondition condition) {
+		Integer categoryId = condition.getCategoryId();
+		Integer page = condition.getPage();
+		Integer limit = condition.getLimit();
+		if (categoryId == null || page == null || limit == null) {
+			return toJSONError("参数有误");
+		}
 		List<Article> articles = stageService.findArticlesByCategoryWithLimit(
-				condition.getCategoryId(),
-				condition.getPage() * condition.getLimit() + 1,
-				condition.getLimit());
+				categoryId, page * limit + 1, limit);
 		return toJSON(articles);
 	}
 
+	/**
+	 * 转JSON格式.
+	 * 
+	 * @param resultData
+	 *            the result data
+	 * @return the string
+	 */
 	private String toJSON(Object resultData) {
 		return toJSON(resultData, null);
 	}
 
+	/**
+	 * 转JSON格式带参数.
+	 * 
+	 * @param resultData
+	 *            the result data
+	 * @param config
+	 *            the config
+	 * @return the string
+	 */
 	private String toJSON(Object resultData, JsonConfig config) {
 		JSONObject jsonObj = new JSONObject();
 		jsonObj.put(StageConstant.JSONConstant.KEY_RESULT,
@@ -46,6 +77,13 @@ public class StageDataController extends BaseController {
 		return resData;
 	}
 
+	/**
+	 * 转JSON格式（返回错误）.
+	 * 
+	 * @param errorMessage
+	 *            the error message
+	 * @return the string
+	 */
 	private String toJSONError(String errorMessage) {
 		JSONObject jsonObj = new JSONObject();
 		jsonObj.put(StageConstant.JSONConstant.KEY_RESULT,

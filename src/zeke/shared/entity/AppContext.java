@@ -2,7 +2,7 @@ package zeke.shared.entity;
 
 import javax.servlet.ServletContext;
 
-import zeke.shared.constant.IAppConstant;
+import zeke.shared.constant.AppConstant;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -44,7 +44,7 @@ public class AppContext {
 	 * @return the instace
 	 */
 	public static AppContext getInstace(ServletContext servletContext) {
-		return (AppContext) servletContext.getAttribute(IAppConstant.KEY_APPCONTEXT);
+		return (AppContext) servletContext.getAttribute(AppConstant.KEY_APPCONTEXT);
 	}
 
 	/**

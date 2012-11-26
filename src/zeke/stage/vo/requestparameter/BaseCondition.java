@@ -2,10 +2,10 @@ package zeke.stage.vo.requestparameter;
 
 public class BaseCondition {
 	private String type;
-	private int categoryId;
-	private int articleId;
-	private int page;
-	private int limit;
+	private Integer categoryId;
+	private Integer articleId;
+	private Integer page;
+	private Integer limit;
 
 	public String getType() {
 		return type;
@@ -15,35 +15,35 @@ public class BaseCondition {
 		this.type = type;
 	}
 
-	public int getCategoryId() {
+	public Integer getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
 
-	public int getArticleId() {
+	public Integer getArticleId() {
 		return articleId;
 	}
 
-	public void setArticleId(int articleId) {
+	public void setArticleId(Integer articleId) {
 		this.articleId = articleId;
 	}
 
-	public int getPage() {
+	public Integer getPage() {
 		return page;
 	}
 
-	public void setPage(int page) {
+	public void setPage(Integer page) {
 		this.page = page;
 	}
 
-	public int getLimit() {
+	public Integer getLimit() {
 		return limit;
 	}
 
-	public void setLimit(int limit) {
+	public void setLimit(Integer limit) {
 		this.limit = limit;
 	}
 
