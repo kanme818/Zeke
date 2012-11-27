@@ -29,10 +29,8 @@
 </c:if>
 </head>
 <body>
-	article.jsp
-	<%=meta.getSheetStyle()%>
-	<%=request.getContextPath()%>
-	<%=request.getContextPath() + meta.getSheetStyle()%>
-	<%=meta.isMultibleSheet()%>
+	<c:forEach items="<%=sheets%>" var="sheet" varStatus="i">
+		<div class="sheet">${sheet.content}</div>
+	</c:forEach>
 </body>
 </html>
