@@ -1,0 +1,11 @@
+设计笔记
+
+>关于articleType字段：
+ADMIN保存时必选“文章类型” 该字段影响到该文章需要使用哪个JSP模板显示。
+数据库参数表保存文章类型和JSP页面的关系（该表还可用作category等其他用处，可再议）
+parameter_type	type_code	type_desc		type_value
+article				0		单页文章			article_single
+article				1		多页文章			article_multiple
+category			0		带缩略图的分类	category_style_a
+category			1		不带缩略图的分类	category_style_b	
+
