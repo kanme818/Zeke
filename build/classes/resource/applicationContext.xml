@@ -15,7 +15,7 @@
 	<description>Spring公共配置</description>
 	
 	<!-- 使用annotation 自动注册bean -->
-	<context:component-scan base-package="com.jiandan">
+	<context:component-scan base-package="zeke">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 
@@ -51,7 +51,7 @@
 	<!-- MyBatis配置 --> 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="typeAliasesPackage" value="com.jiandan" />
+		<property name="typeAliasesPackage" value="zeke" />
 		<property name="mapperLocations" value="classpath:/mybatis/*Mapper.xml" />
 	</bean>
 	
@@ -60,9 +60,9 @@
         <constructor-arg index="0" ref="sqlSessionFactory" />
     </bean>
 	
-	<bean id="selfServiceDao" class = "com.jiandan.business.repository.selfservice.SelfServiceDaoImpl" >
+	<!-- <bean id="selfServiceDao" class = "com.jiandan.business.repository.selfservice.SelfServiceDaoImpl" >
 	    <property name="sqlSession" ref="sqlSession" />
-	</bean>
+	</bean> -->
 	<!-- 直接调用myBatis -->
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

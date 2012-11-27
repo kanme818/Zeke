@@ -88,7 +88,7 @@ public class StagePageController extends BaseController {
 		vo.setArticle(article);
 		vo.setComments(comments);
 		request.setAttribute(StageConstant.Request.KEY_ONE_ARTICLE, vo);
-		return "article";
+		return "/stage/jsp/article";
 	}
 
 }
