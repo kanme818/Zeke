@@ -22,11 +22,8 @@
 %>
 <script type="text/javascript"
 	src="<%=request.getContextPath()%>/theme/default/js/jquery-1.8.2.js"></script>
-<!-- 指定该文章额外脚本，在ADMIN中配置 -->
-<c:if test="<%=meta.isMultibleSheet()%>">
-	<script type="text/javascript"
-		src="<%=request.getContextPath() + meta.getSheetStyle()%>"></script>
-</c:if>
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/theme/default/js/article-style-multible-sheet.js"></script>
 </head>
 <body>
 	<c:forEach items="<%=sheets%>" var="sheet" varStatus="i">

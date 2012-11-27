@@ -47,8 +47,6 @@ public class StageServiceImpl implements IStageService {
 	public Article findOneArticle(int articleId) {
 		Article article = new Article();
 		ArticleMeta meta = new ArticleMeta();
-		meta.setMultibleSheet(true);
-		meta.setSheetStyle("/theme/default/js/article-style-multible-sheet.js");
 		article.setMeta(meta);
 		
 		ArticleSheet sheet1= new ArticleSheet();
