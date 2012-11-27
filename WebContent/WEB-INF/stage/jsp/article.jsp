@@ -1,3 +1,4 @@
+<%@page import="org.apache.catalina.Context"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -15,19 +16,26 @@
 <%
 	ArticleVo artilceVo = (ArticleVo) request
 			.getAttribute(Request.KEY_ONE_ARTICLE);
+
 	Article article = artilceVo.getArticle();
 	ArticleMeta meta = article.getMeta();
 	List<ArticleSheet> sheets = article.getSheets();
 %>
-<script type="text/javascript" src="/theme/default/js/jquery-1.8.2.js"></script>
-<c:if test="meta.isMultibleSheet">
-	<script type="text/javascript" src="<%=meta.getSheetStyle()%>"></script>
-</c:if>
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/theme/default/js/jquery-1.8.2.js"></script>
+<%
+	if (meta.isMultibleSheet()) {
+%>
+<script type="text/javascript"
+	src="<%=request.getContextPath() + meta.getSheetStyle()%>"></script>
+<%
+	}
+%>
 </head>
 <body>
-	<%@include file="jspf/header/header.jspf"%>
-	<%@include file="jspf/content-category/content-category.jspf"%>
-	<%@include file="jspf/sidebar/sidebar_typeA.jspf"%>
-	<%@include file="jspf/footer/footer.jspf"%>
+	article.jsp
+	<%=meta.getSheetStyle()%>
+	<%=request.getContextPath()%>
+	<%=request.getContextPath() + meta.getSheetStyle()%>
 </body>
 </html>

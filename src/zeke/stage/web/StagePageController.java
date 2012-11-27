@@ -75,7 +75,7 @@ public class StagePageController extends BaseController {
 	public String showArticle(BaseCondition parameter) {
 		Integer articleId = parameter.getArticleId();
 		if (articleId == null) {
-			return "error";
+			return "/stage/jsp/error";
 		}
 		Article article = stageService.findOneArticle(articleId);
 		if (article == null) {
