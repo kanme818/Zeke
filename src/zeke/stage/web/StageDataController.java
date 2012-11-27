@@ -64,9 +64,9 @@ public class StageDataController extends BaseController {
 	 */
 	private String toJSON(Object resultData, JsonConfig config) {
 		JSONObject jsonObj = new JSONObject();
-		jsonObj.put(StageConstant.JSONConstant.KEY_RESULT,
-				StageConstant.JSONConstant.RESULT_OK);
-		jsonObj.put(StageConstant.JSONConstant.KEY_DATA, resultData);
+		jsonObj.put(StageConstant.JSON.KEY_RESULT,
+				StageConstant.JSON.RESULT_OK);
+		jsonObj.put(StageConstant.JSON.KEY_DATA, resultData);
 		String resData = null;
 		if (config != null) {
 			resData = JSONObject.fromObject(jsonObj, config).toString();
@@ -86,9 +86,9 @@ public class StageDataController extends BaseController {
 	 */
 	private String toJSONError(String errorMessage) {
 		JSONObject jsonObj = new JSONObject();
-		jsonObj.put(StageConstant.JSONConstant.KEY_RESULT,
-				StageConstant.JSONConstant.RESULT_FAILED);
-		jsonObj.put(StageConstant.JSONConstant.KEY_MESSAGE, errorMessage);
+		jsonObj.put(StageConstant.JSON.KEY_RESULT,
+				StageConstant.JSON.RESULT_FAILED);
+		jsonObj.put(StageConstant.JSON.KEY_MESSAGE, errorMessage);
 		String resData = JSONObject.fromObject(jsonObj).toString();
 		logger.debug(resData);
 		return resData;

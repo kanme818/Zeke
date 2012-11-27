@@ -32,7 +32,7 @@ public class StagePageController extends BaseController {
 		int recordsLimited = context.getRecordsLimited();
 		List<Article> articles = stageService.findArticlesByCategoryWithLimit(
 				categoryId, 1, recordsLimited);
-		request.setAttribute(StageConstant.RequestConstant.KEY_ARTICLES,
+		request.setAttribute(StageConstant.Request.KEY_ARTICLES,
 				articles);
 		return "index";
 	}
@@ -59,7 +59,7 @@ public class StagePageController extends BaseController {
 
 		List<Article> articles = stageService.findArticlesByCategoryWithLimit(
 				categoryId, 1, recordsLimited);
-		request.setAttribute(StageConstant.RequestConstant.KEY_ARTICLES,
+		request.setAttribute(StageConstant.Request.KEY_ARTICLES,
 				articles);
 
 		return "category";
