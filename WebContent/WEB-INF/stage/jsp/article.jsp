@@ -16,26 +16,23 @@
 <%
 	ArticleVo artilceVo = (ArticleVo) request
 			.getAttribute(Request.KEY_ONE_ARTICLE);
-
 	Article article = artilceVo.getArticle();
 	ArticleMeta meta = article.getMeta();
 	List<ArticleSheet> sheets = article.getSheets();
 %>
 <script type="text/javascript"
 	src="<%=request.getContextPath()%>/theme/default/js/jquery-1.8.2.js"></script>
-<%
-	if (meta.isMultibleSheet()) {
-%>
-<script type="text/javascript"
-	src="<%=request.getContextPath() + meta.getSheetStyle()%>"></script>
-<%
-	}
-%>
+<!-- 指定该文章额外脚本，在ADMIN中配置 -->
+<c:if test="<%=meta.isMultibleSheet()%>">
+	<script type="text/javascript"
+		src="<%=request.getContextPath() + meta.getSheetStyle()%>"></script>
+</c:if>
 </head>
 <body>
 	article.jsp
 	<%=meta.getSheetStyle()%>
 	<%=request.getContextPath()%>
 	<%=request.getContextPath() + meta.getSheetStyle()%>
+	<%=meta.isMultibleSheet()%>
 </body>
 </html>

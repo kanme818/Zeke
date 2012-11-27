@@ -46,7 +46,7 @@ public class StageServiceImpl implements IStageService {
 		Article article = new Article();
 		ArticleMeta meta = new ArticleMeta();
 		meta.setMultibleSheet(true);
-		meta.setSheetStyle("/theme/default/js/article-style-default.js");
+		meta.setSheetStyle("/theme/default/js/article-style-multible-sheet.js");
 		article.setMeta(meta);
 		return article;
 	}
