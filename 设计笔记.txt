@@ -9,3 +9,7 @@ article				1		多页文章			article_multiple
 category			0		带缩略图的分类	category_style_a
 category			1		不带缩略图的分类	category_style_b	
 
+>关于Article,ArticleMeta,ArticleSheet
+	Article 分为ArticleMeta和ArticleSheet两部分，ArticleMeta包含了除内容之外的所有东西，用户很少会定制这部分内容
+	内容部分可能会比较多的定制，ArticleSheet将文章分为多个sheet，最后由JSP决定如何组合文章。
+	ADMIN也需要为特定类型文章定制输入界面。
