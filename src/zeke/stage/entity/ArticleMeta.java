@@ -10,6 +10,7 @@ public class ArticleMeta {
 	private boolean isMultibleSheet;
 
 	/** 指定文章的sheet组织样式. */
+	// 指定一个额外的JS文件
 	private String sheetStyle;
 
 	/**

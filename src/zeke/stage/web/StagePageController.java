@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import zeke.shared.entity.AppContext;
 import zeke.stage.constant.StageConstant;
 import zeke.stage.entity.Article;
+import zeke.stage.entity.Comment;
+import zeke.stage.vo.ArticleVo;
 import zeke.stage.vo.requestparameter.BaseCondition;
 
 // TODO: Auto-generated Javadoc
@@ -32,8 +34,7 @@ public class StagePageController extends BaseController {
 		int recordsLimited = context.getRecordsLimited();
 		List<Article> articles = stageService.findArticlesByCategoryWithLimit(
 				categoryId, 1, recordsLimited);
-		request.setAttribute(StageConstant.Request.KEY_ARTICLES,
-				articles);
+		request.setAttribute(StageConstant.Request.KEY_ARTICLES, articles);
 		return "index";
 	}
 
@@ -59,9 +60,7 @@ public class StagePageController extends BaseController {
 
 		List<Article> articles = stageService.findArticlesByCategoryWithLimit(
 				categoryId, 1, recordsLimited);
-		request.setAttribute(StageConstant.Request.KEY_ARTICLES,
-				articles);
-
+		request.setAttribute(StageConstant.Request.KEY_ARTICLES, articles);
 		return "category";
 	}
 
@@ -73,7 +72,22 @@ public class StagePageController extends BaseController {
 	 * @return the string
 	 */
 	@RequestMapping(value = "article")
-	public String showArtile(BaseCondition parameter) {
+	public String showArticle(BaseCondition parameter) {
+		Integer articleId = parameter.getArticleId();
+		if (articleId == null) {
+			return "error";
+		}
+		Article article = stageService.findOneArticle(articleId);
+		if (article == null) {
+			return "404";
+		}
+
+		List<Comment> comments = stageService.findComments(articleId);
+		
+		ArticleVo vo = new ArticleVo();
+		vo.setArticle(article);
+		vo.setComments(comments);
+		request.setAttribute(StageConstant.Request.KEY_ONE_ARTICLE, vo);
 		return "article";
 	}
 

@@ -4,6 +4,7 @@ public interface StageConstant {
 	public interface Request {
 		String KEY_ARTICLES = "articles";
 		String KEY_CATEGORY = "category";
+		String KEY_ONE_ARTICLE = "article";
 	}
 
 	public interface JSON {
@@ -13,5 +14,10 @@ public interface StageConstant {
 
 		String RESULT_OK = "ok";
 		String RESULT_FAILED = "failed";
+	}
+	
+	public interface JSP {
+		String PAGE_ERROR = "error";
+		String PAGE_NOT_FOUND = "404";
 	}
 }

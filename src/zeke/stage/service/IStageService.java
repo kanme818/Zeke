@@ -3,6 +3,7 @@ package zeke.stage.service;
 import java.util.List;
 
 import zeke.stage.entity.Article;
+import zeke.stage.entity.Comment;
 import zeke.stage.vo.requestparameter.ArticleSearchCondition;
 
 public interface IStageService {
@@ -15,4 +16,8 @@ public interface IStageService {
 
 	List<Article> findArticlesByConditionWithLimit(
 			ArticleSearchCondition condition, int from, int to);
+
+	Article findOneArticle(int articleId);
+
+	List<Comment> findComments(int articleId);
 }
