@@ -15,7 +15,7 @@ public class ArticleMeta {
 	private Integer id;
 
 	/** 文章类型. */
-	private Integer typeCode;
+	private Integer articleType;
 
 	/** The author id. */
 	private Integer authorId;
@@ -23,20 +23,20 @@ public class ArticleMeta {
 	/** The title. */
 	private String title;
 
-	/** The last modified. */
-	private Date lastModified;
-
 	/** draft, publish, unopened, obsolete. */
 	private Integer status;
 
 	/** The category. */
-	private Integer category;
+	private Integer categoryId;
 
 	/** 该文章的连接（不加域名，只取相对地址）. */
 	private String link;
 
 	/** 连接（包括域名，为SEO）. */
-	private String linkSEO;
+	private String fullLink;
+
+	/** The last modified. */
+	private Date lastModified;
 
 	/** open, closed(关闭评论，但是原评论可见), hidden（隐藏所有评论）. */
 	private Integer commentStatus;
@@ -64,22 +64,22 @@ public class ArticleMeta {
 	}
 
 	/**
-	 * Gets the type code.
+	 * Gets the article type.
 	 * 
-	 * @return the type code
+	 * @return the article type
 	 */
-	public Integer getTypeCode() {
-		return typeCode;
+	public Integer getArticleType() {
+		return articleType;
 	}
 
 	/**
-	 * Sets the type code.
+	 * Sets the article type.
 	 * 
-	 * @param typeCode
-	 *            the new type code
+	 * @param articleType
+	 *            the new article type
 	 */
-	public void setTypeCode(Integer typeCode) {
-		this.typeCode = typeCode;
+	public void setArticleType(Integer articleType) {
+		this.articleType = articleType;
 	}
 
 	/**
@@ -121,25 +121,6 @@ public class ArticleMeta {
 	}
 
 	/**
-	 * Gets the last modified.
-	 * 
-	 * @return the last modified
-	 */
-	public Date getLastModified() {
-		return lastModified;
-	}
-
-	/**
-	 * Sets the last modified.
-	 * 
-	 * @param lastModified
-	 *            the new last modified
-	 */
-	public void setLastModified(Date lastModified) {
-		this.lastModified = lastModified;
-	}
-
-	/**
 	 * Gets the status.
 	 * 
 	 * @return the status
@@ -159,22 +140,22 @@ public class ArticleMeta {
 	}
 
 	/**
-	 * Gets the category.
+	 * Gets the category id.
 	 * 
-	 * @return the category
+	 * @return the category id
 	 */
-	public Integer getCategory() {
-		return category;
+	public Integer getCategoryId() {
+		return categoryId;
 	}
 
 	/**
-	 * Sets the category.
+	 * Sets the category id.
 	 * 
-	 * @param category
-	 *            the new category
+	 * @param categoryId
+	 *            the new category id
 	 */
-	public void setCategory(Integer category) {
-		this.category = category;
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	/**
@@ -194,6 +175,44 @@ public class ArticleMeta {
 	 */
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	/**
+	 * Gets the full link.
+	 * 
+	 * @return the full link
+	 */
+	public String getFullLink() {
+		return fullLink;
+	}
+
+	/**
+	 * Sets the full link.
+	 * 
+	 * @param fullLink
+	 *            the new full link
+	 */
+	public void setFullLink(String fullLink) {
+		this.fullLink = fullLink;
+	}
+
+	/**
+	 * Gets the last modified.
+	 * 
+	 * @return the last modified
+	 */
+	public Date getLastModified() {
+		return lastModified;
+	}
+
+	/**
+	 * Sets the last modified.
+	 * 
+	 * @param lastModified
+	 *            the new last modified
+	 */
+	public void setLastModified(Date lastModified) {
+		this.lastModified = lastModified;
 	}
 
 	/**
@@ -232,25 +251,6 @@ public class ArticleMeta {
 	 */
 	public void setCommentCount(Integer commentCount) {
 		this.commentCount = commentCount;
-	}
-
-	/**
-	 * Gets the link seo.
-	 * 
-	 * @return the link seo
-	 */
-	public String getLinkSEO() {
-		return linkSEO;
-	}
-
-	/**
-	 * Sets the link seo.
-	 * 
-	 * @param linkSEO
-	 *            the new link seo
-	 */
-	public void setLinkSEO(String linkSEO) {
-		this.linkSEO = linkSEO;
 	}
 
 }
