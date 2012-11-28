@@ -9,6 +9,8 @@
 	href="../../../system/css/easyui/themes/icon.css">
 <link rel="stylesheet" href="../../../system/css/admin/admin.css"
 	type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../system/css/admin/admin-icon.css"
+	type="text/css" media="screen" />
 <script type="text/javascript"
 	src="../../../system/js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript"
@@ -16,28 +18,50 @@
 <script type="text/javascript" src="../../../system/js/admin/admin.js"></script>
 </head>
 <body>
-	<div class="wrapper">
-		<div class="header-wrapper">
-			<div class="header-inner-wrapper inner-wrapper">
-				<!-- header.jsp -->
-			</div>
-		</div>
-		<div class="body-wrapper">
-			<div class="body-inner-wrapper inner-wrapper">
-				<div class="content-wrapper">
-					<!-- content*.jsp -->
+	<div class="wrapper easyui-layout">
+		<div data-options="region:'north'" class="header-wrapper"></div>
+		<div data-options="region:'west'" title="控制台" class="menu-wrapper">
+			<div class="easyui-accordion menu-bar"
+				data-options="fit:true,border:false">
+				
+				<div class="menu-group" data-options="iconCls:'icon-menu-article'"
+					title="文章管理">
+					<div class="menu-item">
+						<a href="#">所有文章</a>
+					</div>
+					<div class="menu-item">
+						<a href="#">新增文章</a>
+					</div>
+					<div class="menu-item">
+						<a href="#">所有分类</a>
+					</div>
+					<div class="menu-item">
+						<a href="#">新增分类</a>
+					</div>
 				</div>
-				<div class="sidebar-wrapper">
-					<!-- sidebar*.jsp -->
+				
+				<div class="menu-group" data-options="iconCls:'icon-menu-article'"
+					title="媒体库">
+					<div class="menu-item">
+						<a href="#">媒体库</a>
+					</div>
+					<div class="menu-item">
+						<a href="#">新增</a>
+					</div>
 				</div>
-				<div class="clear"></div>
+				
+				<div class="menu-group" data-options="iconCls:'icon-menu-article'"
+					title="评论管理">
+					<div class="menu-item">
+						<a href="#">所有评论</a>
+					</div>
+				</div>
+				
 			</div>
 		</div>
-		<div class="footer-wrapper">
-			<div class="footer-inner-wrapper inner-wrapper">
-				<!-- footer.jsp -->
-			</div>
-		</div>
+		<div data-options="region:'center',iconCls:'icon-menu'"
+			class="content-wrapper"></div>
+		<div data-options="region:'south'" class="footer-wrapper"></div>
 	</div>
 </body>
 </html>
