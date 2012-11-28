@@ -13,3 +13,7 @@ category			1		不带缩略图的分类	category_style_b
 	Article 分为ArticleMeta和ArticleSheet两部分，ArticleMeta包含了除内容之外的所有东西，用户很少会定制这部分内容
 	内容部分可能会比较多的定制，ArticleSheet将文章分为多个sheet，最后由JSP决定如何组合文章。
 	ADMIN也需要为特定类型文章定制输入界面。
+
+>关于WebContent下的plugin文件夹和system文件夹
+	system文件夹下存放的css,imgage,js文件为系统必须的文件，例如jquery和jquery easyui等
+	plugin文件夹下存放的是插件所需的文件。例如：文章编辑时，模板自带的额外css,image,js都算plugin （这个文件夹的增删文件几率比较大，和system独立开）

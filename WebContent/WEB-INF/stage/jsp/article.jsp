@@ -21,9 +21,9 @@
 	List<ArticleSheet> sheets = article.getSheets();
 %>
 <script type="text/javascript"
-	src="<%=request.getContextPath()%>/theme/default/js/jquery-1.8.2.js"></script>
+	src="<%=request.getContextPath()%>/system/js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript"
-	src="<%=request.getContextPath()%>/theme/default/js/article-style-multible-sheet.js"></script>
+	src="<%=request.getContextPath()%>/system/js/article-style-multible-sheet.js"></script>
 </head>
 <body>
 	<c:forEach items="<%=sheets%>" var="sheet" varStatus="i">
