@@ -1,0 +1,40 @@
+@import url('reset.css');
+
+.wrapper {
+	overflow: hidden;
+	width: 100%;
+}
+
+.header-wrapper,.body-wrapper,.footer-wrapper {
+	overflow: hidden;
+	width: 100%;
+}
+
+.inner-wrapper {
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header-inner-wrapper {
+	height: 60px;
+	background-color: #c2c2c2;
+}
+
+.body-inner-wrapper {
+	
+}
+
+.footer-inner-wrapper {
+	
+}
+
+.content-wrapper {
+	float: left;
+	width: 700px;
+}
+
+.sidebar-wrapper {
+	float: right;
+	width: 360px;
+}
