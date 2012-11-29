@@ -1,0 +1,81 @@
+@import url('reset.css');
+
+.wrapper {
+	width: 100%;
+	background: url(' '  ) #c2c2c2 no-repeat;
+}
+
+.inner-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 600px;
+	height: 600px;
+	padding-top: 10px;
+	background: url(' '  ) #ffffff no-repeat;
+}
+
+#yeah {
+	position: absolute;
+	bottom: 200px;
+	right: 60px;
+	width: 160px;
+	height: 160px;
+	border: 1px solid red;
+}
+
+#fireworks {
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 50px;
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+}
+
+#start {
+	width: 240px;
+	height: 120px;
+	margin: 0 auto;
+	margin-top: 60px;
+	overflow: hidden;
+	cursor: pointer;
+	background: url(' '  ) #c2c2c2 no-repeat;
+}
+
+.btn-hover {
+	background: url("image/pic(1) .jpg") transparent no-repeat !important;
+}
+
+#name {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 120px;
+	height: 120px;
+	border: 1px solid red;
+}
+
+#image-frame {
+	position: relative;
+	width: 360px;
+	height: 360px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: url(' '  ) #c2c2c2 no-repeat;
+}
+
+#image-bar {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 360px;
+	height: 1080px;
+	overflow: hidden;
+}
+
+.photo-item {
+	width: 360px;
+	height: 360px;
+	overflow: hidden;
+}
