@@ -58,8 +58,8 @@
 
 #image-frame {
 	position: relative;
-	width: 360px;
-	height: 360px;
+	width: 522px;
+	height: 522px;
 	margin: 0 auto;
 	overflow: hidden;
 	background: url(' '  ) #c2c2c2 no-repeat;
@@ -69,13 +69,13 @@
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
-	width: 360px;
-	height: 1080px;
+	width: 522px;
+	height: 1566px;
 	overflow: hidden;
 }
 
 .photo-item {
-	width: 360px;
-	height: 360px;
+	width: 522px;
+	height: 522px;
 	overflow: hidden;
 }
